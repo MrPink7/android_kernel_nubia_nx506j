@@ -43,11 +43,7 @@ obj-$(CONFIG_FB_MSM_QPIC_ILI_QVGA_PANEL) += qpic_panel_ili_qvga.o
 
 obj-$(CONFIG_FB_MSM_MDSS) += mdss_fb.o
 
-ifeq ($(CONFIG_FB_MSM_MDSS_MDP3),y)
-obj-$(CONFIG_FB_MSM_MDSS_DSI_CTRL_STATUS) += dsi_status_v2.o
-else
 obj-$(CONFIG_FB_MSM_MDSS_DSI_CTRL_STATUS) += mdss_dsi_status.o
-endif
 
 # luochangyang For LCD 2014/03/12
 obj-$(CONFIG_ZTEMT_LCD_AVDD_CONFIG_BY_TPS65132) += zte_tps65132.o
@@ -64,7 +60,4 @@ CFLAGS_zte_disp_enhance.o += -DDEBUG
 endif
 # luochangyang END
 
-obj-$(CONFIG_SLIMPORT_ANX7808) += slimport_anx7808/
-obj-$(CONFIG_SLIMPORT_ANX7812) += slimport_anx7812/
 obj-$(CONFIG_ZTEMT_LCD_BACKLIGHT) +=zte_backlight.o
-obj-$(CONFIG_SII8620_MHL_TX) += Sii8620/

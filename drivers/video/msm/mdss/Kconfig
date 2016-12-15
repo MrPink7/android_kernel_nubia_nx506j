@@ -117,11 +117,6 @@ config ZTEMT_LCD_DEBUG_EN
 	bool "LCD debug log enable"
 	depends on ZTEMT_LCD_MIPI_COMMON
 	default n
-
-config NX506J_TEARING_TEST
-	bool "LCD debug log for screen tearing"
-	depends on ZTEMT_LCD_MIPI_COMMON
-	default n
 #luochangyang END
 config ZTEMT_LCD_BACKLIGHT
 	bool "ztemt lcd backlight"
@@ -134,7 +129,3 @@ config ZTEMT_LCD_BACKLIGHT_LINEAR_CONTROL_METHOLD
 	default n
 
 endmenu
-
-source "drivers/video/msm/mdss/slimport_anx7808/Kconfig"
-source "drivers/video/msm/mdss/slimport_anx7812/Kconfig"
-source "drivers/video/msm/mdss/Sii8620/Kconfig"
